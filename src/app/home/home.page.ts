@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular'; // Asegúrate de importar NavController
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
 
+  navigateToComponent() {
+    this.navCtrl.navigateForward('/page2');  // Aquí se indica la ruta correcta '/pagina2'
+  }
 }
